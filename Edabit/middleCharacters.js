@@ -18,5 +18,10 @@ function getMiddle(str) {
     : str[Math.floor(str.length / 2)];
 }
 
-console.log(getMiddle("odd"));
-console.log(getMiddle("test"));
+// using substr instead of slice, and using falsy value of 0 for str.length & 2
+function getMiddle2(str) {
+  return str.length % 2 ? str[Math.floor(str.length / 2)] : str.substr(str.length/2 - 1, 2)
+}
+
+console.log(getMiddle2("odd"));
+console.log(getMiddle2("test"));
