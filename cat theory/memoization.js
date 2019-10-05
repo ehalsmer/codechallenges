@@ -4,9 +4,11 @@ function simpleFibonacci(n){
     if ((n === 0) | (n === 1)){
         return n;
     } else {
-        return fibonacci(n-1) + fibonacci(n-2);
+        return simpleFibonacci(n-1) + simpleFibonacci(n-2);
     }
 }
+
+
 
 // note: fibonacci(4) is in fact the 5th fibonacci number, if we start counting at n=0, and start indexing at 0. Sequence: 0, 1, 1, 2, 3, 5, ...
 // console.log(simpleFibonacci(4))
