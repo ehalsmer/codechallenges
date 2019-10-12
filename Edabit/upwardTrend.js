@@ -21,6 +21,7 @@ function upwardTrend(arr){
     } else {
         return 'Strings not permitted!'
     }
+    
 }
 
 console.log(upwardTrend([1, 2, 3, "4"]))
