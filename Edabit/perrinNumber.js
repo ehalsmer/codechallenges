@@ -13,6 +13,8 @@ perrin(8) ➞ 10
 perrin(26) ➞ 1497
 */
 
+// this function may be a good candidate for memoization
+
 function perrin(n){
     if (n == 0){
         return 3
@@ -26,4 +28,31 @@ function perrin(n){
     else return perrin(n-2) + perrin(n-3)
 }
 
-console.log(perrin(26))
+
+function memoPerrin(n){
+    let memo = {}
+    function perr(n){
+        let value;
+        // find value either from memo or computation
+        if (n in memo){
+            value = memo[n]
+        } else {
+            if (n == 0){
+                value = 3
+            } 
+            else if (n == 1){
+                value = 0
+            }
+            else if (n == 2){
+                value = 2
+            }
+            else value = perr(n-2) + perr(n-3)
+            // set value to memo 
+            memo[n] = value
+        }
+        return value;
+    }
+    return perr(n)
+}
+
+console.log(memoPerrin(398))

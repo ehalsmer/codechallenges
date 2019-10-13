@@ -10,7 +10,8 @@ function simpleFibonacci(n){
 
 
 
-// note: fibonacci(4) is in fact the 5th fibonacci number, if we start counting at n=0, and start indexing at 0. Sequence: 0, 1, 1, 2, 3, 5, ...
+// note: fibonacci(4) is in fact the 5th fibonacci number, if we start counting at n=0, and start indexing at 0.
+// Sequence: 0, 1, 1, 2, 3, 5, ...
 // console.log(simpleFibonacci(4))
 // console.log(fibonacci(50)) // Don't run this line. The poor performance and recursion
 // make the fibonacci function a good candidate for memoization.
